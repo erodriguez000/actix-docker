@@ -65,5 +65,5 @@ CMD ["/usr/local/bin/actix-docker"]
 ```
 
 ```sh
-docker build -t actix-web .
+docker build -t actix-docker .
 ```
