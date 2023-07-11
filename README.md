@@ -1,4 +1,4 @@
-# Containerizing a Rust Actix server with Alpine 14MB
+# Containerizing a Rust Actix server with Alpine ~ 14MB Total
 
 ## Optimize release in Cargo.toml
 
