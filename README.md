@@ -35,7 +35,7 @@ COPY ./src ./src
 
 # Build for release. 
 # This will uninstall the dummy dependencies and install the real ones
-RUN rm ./target/release/deps/actix-docker*
+RUN rm ./target/release/deps/actix_docker*
 RUN cargo build --release
 
 # Start a new stage so that the final image does not contain the cached dependencies
