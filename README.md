@@ -1,3 +1,18 @@
+# Containerizing a Rust Actix server with Alpine 14MB
+
+## Optimize release in Cargo.toml
+
+```toml
+[profile.release]
+lto = true
+strip = true
+opt-level = 3
+panic = 'abort'
+codegen-units = 1
+```
+
+## Create Dockerfile
+```Dockerfile
 FROM rustlang/rust:nightly-alpine3.14 as builder
 
 # Install build dependencies
@@ -46,3 +61,9 @@ EXPOSE 8000
 
 # Run the binary
 CMD ["/usr/local/bin/actix-docker"]
+
+```
+
+```sh
+docker build -t actix-web .
+```
